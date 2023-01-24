@@ -38,12 +38,18 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.numBx_addColumns = new System.Windows.Forms.NumericUpDown();
             this.numBx_addRows = new System.Windows.Forms.NumericUpDown();
+            this.btn_removeColumns = new System.Windows.Forms.Button();
+            this.numBx_removeColumns = new System.Windows.Forms.NumericUpDown();
+            this.btn_removeRows = new System.Windows.Forms.Button();
+            this.numBx_removeRows = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bx_debug = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBx_addColumns)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBx_addRows)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBx_removeColumns)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBx_removeRows)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -80,21 +86,21 @@
             // 
             // btn_addColumns
             // 
-            this.btn_addColumns.Location = new System.Drawing.Point(804, 589);
+            this.btn_addColumns.Location = new System.Drawing.Point(865, 563);
             this.btn_addColumns.Name = "btn_addColumns";
-            this.btn_addColumns.Size = new System.Drawing.Size(90, 37);
+            this.btn_addColumns.Size = new System.Drawing.Size(55, 37);
             this.btn_addColumns.TabIndex = 1;
-            this.btn_addColumns.Text = "Add Column";
+            this.btn_addColumns.Text = "Add Columns";
             this.btn_addColumns.UseVisualStyleBackColor = true;
             this.btn_addColumns.Click += new System.EventHandler(this.btn_addColumns_Click);
             // 
             // btn_addRows
             // 
-            this.btn_addRows.Location = new System.Drawing.Point(708, 632);
+            this.btn_addRows.Location = new System.Drawing.Point(743, 632);
             this.btn_addRows.Name = "btn_addRows";
-            this.btn_addRows.Size = new System.Drawing.Size(90, 37);
+            this.btn_addRows.Size = new System.Drawing.Size(55, 37);
             this.btn_addRows.TabIndex = 2;
-            this.btn_addRows.Text = "Add Row";
+            this.btn_addRows.Text = "Add Rows";
             this.btn_addRows.UseVisualStyleBackColor = true;
             this.btn_addRows.Click += new System.EventHandler(this.btn_addRows_Click);
             // 
@@ -109,9 +115,9 @@
             // numBx_addColumns
             // 
             this.numBx_addColumns.BackColor = System.Drawing.SystemColors.Window;
-            this.numBx_addColumns.Location = new System.Drawing.Point(900, 599);
+            this.numBx_addColumns.Location = new System.Drawing.Point(865, 606);
             this.numBx_addColumns.Name = "numBx_addColumns";
-            this.numBx_addColumns.Size = new System.Drawing.Size(120, 20);
+            this.numBx_addColumns.Size = new System.Drawing.Size(55, 20);
             this.numBx_addColumns.TabIndex = 6;
             this.numBx_addColumns.Value = new decimal(new int[] {
             1,
@@ -121,11 +127,54 @@
             // 
             // numBx_addRows
             // 
-            this.numBx_addRows.Location = new System.Drawing.Point(804, 642);
+            this.numBx_addRows.Location = new System.Drawing.Point(743, 675);
             this.numBx_addRows.Name = "numBx_addRows";
-            this.numBx_addRows.Size = new System.Drawing.Size(120, 20);
+            this.numBx_addRows.Size = new System.Drawing.Size(55, 20);
             this.numBx_addRows.TabIndex = 7;
             this.numBx_addRows.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btn_removeColumns
+            // 
+            this.btn_removeColumns.Location = new System.Drawing.Point(804, 563);
+            this.btn_removeColumns.Name = "btn_removeColumns";
+            this.btn_removeColumns.Size = new System.Drawing.Size(55, 37);
+            this.btn_removeColumns.TabIndex = 8;
+            this.btn_removeColumns.Text = "Remove Columns";
+            this.btn_removeColumns.UseVisualStyleBackColor = true;
+            // 
+            // numBx_removeColumns
+            // 
+            this.numBx_removeColumns.BackColor = System.Drawing.SystemColors.Window;
+            this.numBx_removeColumns.Location = new System.Drawing.Point(804, 606);
+            this.numBx_removeColumns.Name = "numBx_removeColumns";
+            this.numBx_removeColumns.Size = new System.Drawing.Size(55, 20);
+            this.numBx_removeColumns.TabIndex = 9;
+            this.numBx_removeColumns.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btn_removeRows
+            // 
+            this.btn_removeRows.Location = new System.Drawing.Point(682, 632);
+            this.btn_removeRows.Name = "btn_removeRows";
+            this.btn_removeRows.Size = new System.Drawing.Size(55, 37);
+            this.btn_removeRows.TabIndex = 10;
+            this.btn_removeRows.Text = "Remove Rows";
+            this.btn_removeRows.UseVisualStyleBackColor = true;
+            // 
+            // numBx_removeRows
+            // 
+            this.numBx_removeRows.Location = new System.Drawing.Point(682, 675);
+            this.numBx_removeRows.Name = "numBx_removeRows";
+            this.numBx_removeRows.Size = new System.Drawing.Size(55, 20);
+            this.numBx_removeRows.TabIndex = 11;
+            this.numBx_removeRows.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -149,7 +198,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.numBx_removeRows);
             this.Controls.Add(this.bx_debug);
+            this.Controls.Add(this.btn_removeRows);
+            this.Controls.Add(this.numBx_removeColumns);
+            this.Controls.Add(this.btn_removeColumns);
             this.Controls.Add(this.numBx_addRows);
             this.Controls.Add(this.numBx_addColumns);
             this.Controls.Add(this.dataGridView2);
@@ -163,6 +216,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBx_addColumns)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBx_addRows)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBx_removeColumns)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBx_removeRows)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,6 +233,10 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.NumericUpDown numBx_addColumns;
         private System.Windows.Forms.NumericUpDown numBx_addRows;
+        private System.Windows.Forms.Button btn_removeColumns;
+        private System.Windows.Forms.NumericUpDown numBx_removeColumns;
+        private System.Windows.Forms.Button btn_removeRows;
+        private System.Windows.Forms.NumericUpDown numBx_removeRows;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.RichTextBox bx_debug;
     }

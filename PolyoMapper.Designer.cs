@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.B = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +38,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.numBx_addColumns = new System.Windows.Forms.NumericUpDown();
             this.numBx_addRows = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bx_debug = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBx_addColumns)).BeginInit();
@@ -45,6 +48,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.A,
@@ -52,9 +57,11 @@
             this.C});
             this.dataGridView1.Location = new System.Drawing.Point(64, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(734, 600);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 600);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //Set the column width of the row headers so you can see numbers greater than 100
+            this.dataGridView1.RowHeadersWidth = 65;
             // 
             // A
             // 
@@ -124,11 +131,25 @@
             0,
             0});
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // bx_debug
+            // 
+            this.bx_debug.Location = new System.Drawing.Point(64, 642);
+            this.bx_debug.Name = "bx_debug";
+            this.bx_debug.Size = new System.Drawing.Size(617, 96);
+            this.bx_debug.TabIndex = 9;
+            this.bx_debug.Text = "";
+            // 
             // PolyoMapper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.bx_debug);
             this.Controls.Add(this.numBx_addRows);
             this.Controls.Add(this.numBx_addColumns);
             this.Controls.Add(this.dataGridView2);
@@ -157,6 +178,8 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.NumericUpDown numBx_addColumns;
         private System.Windows.Forms.NumericUpDown numBx_addRows;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.RichTextBox bx_debug;
     }
 }
 

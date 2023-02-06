@@ -1,0 +1,31 @@
+<!--THIS IS A COMMENT-->
+<h1>PolyoMapper</h1>
+<h2>Placeholder</h2>
+<div *ngIf="!loading">
+  <div *ngFor="let _ of [].constructor(default_rows)" class="row">
+    <br>
+    <div *ngFor="let _ of [].constructor(default_columns)" class="square">
+    </div>
+  </div>
+</div>
+
+
+<br>
+<form [formGroup]="gridForm">
+  <div >
+    <label>
+      Rows:
+      <input style="margin-left: 21px;" formControlName="rows">
+    </label>
+    <button style="margin-left: 5px;" (click)="increaseRows()">Rows</button>
+
+  </div>
+  <div style="margin-top: 10px">
+    <label>
+      Columns:
+      <input formControlName="columns">
+    </label>
+    <button style="margin-left: 5px;" (click)="increaseColumns()">Columns</button>
+
+  </div>
+</form>
